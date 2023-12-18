@@ -1,15 +1,11 @@
 /*----- constants -----*/
-
+const MAX_ATTEMPTS = 7;
+const WORDS = ['SPACE', 'GALAXY', 'PLANET'];
 
 /*----- state variables -----*/
-let secret_word;
-let max_attempts;
-let correct_guess;//count correct guesses
-let incorrect_guess;// count incorrect guesses
-let alphabet = ['a', 'b', 'c', 'd','e','f','g','h',
-                'i','j','k','l','m','n','o','p','q'
-                ,'r','s','t','u','v','w','x','y','z']
-let spaces; // number of spaces in the word
+let secretWord;
+let guessWord;
+let incorrectGuesses; // array to hold incorrect letters
 
 /*----- cached elements  -----*/
 
@@ -21,22 +17,14 @@ let spaces; // number of spaces in the word
 init();
 
 function init() {
-    secret_word = {
+  const rndIdx = Math.floor(Math.random() * WORDS.length);
+  secretWord = WORDS[rndIdx];
+  guessWord = '_'.repeat(secretWord.length);
+  incorrectGuesses = [];
 
-    };
-    max_attempts = 7;
-    correct_guess = {
+  render();
+}
 
-    };
-    incorrect_guess = {
+function render() {
 
-    };
-    alphabet = {
-
-    };
-    spaces = {
-
-        ``
-    }
-render();
 }
