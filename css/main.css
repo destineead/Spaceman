@@ -1,0 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+
+body {
+    margin: 0;
+    font-family: Helvetica;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 1fr 5fr;
+    grid-template-rows: 50px 1fr 30px;
+    gap: 5px;
+}
+
+header {
+    font-family: 'Monoton', sans-serif;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    grid-column-start: 1;
+    grid-column-end: 4;
+    grid-row-start: 1;
+    font-size
+    
+    ~: 3rem
+}
+
+sidebar {
+    grid-column-start: 1;
+    grid-row-start: 2;
+}
+
+footer {
+    grid-column-start: 3;
+    grid-row-start: 3;
+    justify-self: flex-start;
+    align-self: center;
+}
