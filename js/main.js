@@ -8,7 +8,7 @@ let guessWord;
 let incorrectGuesses; // array to hold incorrect letters
 
 /*----- cached elements  -----*/
-
+const guessEl = document.querySelector('footer');
 
 /*----- event listeners -----*/
 
@@ -26,5 +26,5 @@ function init() {
 }
 
 function render() {
-
+  guessEl.innerText = guessWord;
 }

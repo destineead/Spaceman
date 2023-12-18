@@ -9,13 +9,13 @@ body {
     height: 100vh;
     display: grid;
     grid-template-columns: 2fr 1fr 5fr;
-    grid-template-rows: 50px 1fr 30px;
+    grid-template-rows: 50px 1fr 4rem;
+    padding-bottom: 2rem;
 }
 
 header {
     font-family: 'Monoton', sans-serif;
     display: flex;
-    flex-direction: row;
     justify-content: center;
     grid-column-start: 1;
     grid-column-end: 4;
@@ -23,14 +23,36 @@ header {
     font-size: 2.5rem
 }
 
-sidebar {
-    grid-column-start: 1;
-    grid-row-start: 2;
+aside {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+}
+
+aside > button {
+    margin: .25rem;
+    height: 2rem;
+    width: 2rem;
+
 }
 
 footer {
     grid-column-start: 3;
     grid-row-start: 3;
-    justify-self: flex-start;
-    align-self: center;
+    letter-spacing: 1rem;
+    font-size: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+    text-orientation: upright;
+    writing-mode: vertical-lr;
 }
