@@ -56,3 +56,10 @@ section {
     text-orientation: upright;
     writing-mode: vertical-lr;
 }
+
+#spaceman {
+  width: 504px;
+  height: 687px;
+  background-image: url("../imgs/spaceman.jpg");
+  background-position-x: 0;
+}

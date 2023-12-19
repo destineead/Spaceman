@@ -1,6 +1,7 @@
 /*----- constants -----*/
 const MAX_ATTEMPTS = 7;
 const WORDS = ['SPACE', 'GALAXY', 'PLANET'];
+const SPRITE_WIDTH = 504;
 
 /*----- state variables -----*/
 let secretWord;
@@ -9,6 +10,7 @@ let incorrectGuesses; // array to hold incorrect letters
 
 /*----- cached elements  -----*/
 const guessEl = document.querySelector('footer');
+const spacemanEl = document.getElementById('spaceman');
 
 /*----- event listeners -----*/
 
@@ -27,4 +29,5 @@ function init() {
 
 function render() {
   guessEl.innerText = guessWord;
+  spacemanEl.style.backgroundPosition = `-${SPRITE_WIDTH * (6 - incorrectGuesses.length)}px`;
 }
