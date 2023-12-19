@@ -1,6 +1,8 @@
 /*----- constants -----*/
 const MAX_ATTEMPTS = 7;
-const WORDS = ['SPACE', 'GALAXY', 'PLANET'];
+const WORDS = ['SPACE', 'GALAXY', 'PLANET','UNIVERSE','SOLAR SYSTEM', 'NEBULA', 
+               'STAR', 'MOON', 'COMET','ASTEROID', 'INTERSTELLAR', 'CELESTIAL', 'COSMIC', 
+               'SUPERNOVA','QUASAR', 'DARK MATTER', 'GRAVITY', 'ORBIT', 'SPACE', 'TELESCOPE','SPACECRAFT'];
 const SPRITE_WIDTH = 504;
 
 /*----- state variables -----*/
@@ -24,13 +26,12 @@ function init() {
   secretWord = WORDS[rndIdx];
   guessWord = '_'.repeat(secretWord.length);
   incorrectGuesses = [];
-
   render();
 }
 
 function handleGuess(evt) {
-  console.log(evt.target.innerText)
-
+  const letter = evt.target.innerText;
+  if (letter.length !== 1) return;
 }
 
 function render() {
