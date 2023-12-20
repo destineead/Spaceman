@@ -49,9 +49,23 @@ aside > button {
     border-style: outset;
 }
 
+button:hover:not(:disabled) {
+    background-color: rgb(84, 56, 91);
+    color: rgb(24, 19, 91);
+}
+
+button:focus {
+    background-color: rgb(84, 56, 91);
+    color: rgb(24, 19, 91); 
+}
+
+button:disabled {
+    background-color: rgb(84, 56, 91);
+    color: grey;
+}
+
 footer {
     grid-column-start: 3;
-    grid-row-start: 2;
     letter-spacing: 1rem;
     font-size: 3rem;
     justify-content: flex-start;
@@ -65,7 +79,7 @@ p {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2rem;
+    font-size: 3.5rem;
     text-orientation: upright;
     writing-mode: vertical-lr;
     border-color: rgb(84, 56, 91);

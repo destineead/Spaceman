@@ -7,8 +7,8 @@ const SPRITE_WIDTH = 504;
 // audio?
 const MSG_LOOKUP = {
   null: '',
-  'W': 'YOU DID IT!',
-  'L': 'TRY AGAIN!',
+  'W': '💫YOU WIN💫',
+  'L': 'PLAY AGAIN',
 }
 
 /*----- state variables -----*/
@@ -22,10 +22,11 @@ let remainingAttempts;
 const guessEl = document.querySelector('footer');
 const spacemanEl = document.getElementById('spaceman');
 const msgEl = document.getElementById('msg');
+const keyboardBtns = document.querySelectorAll('aside > button');
 
 /*----- event listeners -----*/
 document.querySelector('aside').addEventListener('click', handleGuess);
-// document.querySelector('section').addEventListener('click', init);
+document.getElementById('msg').addEventListener('click', init);
 
 /*----- functions -----*/
 init();
@@ -58,6 +59,7 @@ function handleGuess(evt) {
     incorrectGuesses.push(letter);
     remainingAttempts--;
   }
+  // keyboardBtn.disabled = guessWord.includes(letter) || incorrectGuesses.includes(letter);
   getWinner();
   render();
 }
@@ -77,13 +79,22 @@ function getWinner() {
   }
 } 
 
-function renderBtn() {
-
-
+function renderBtns() {
+  keyboardBtns.forEach(function(btn) {
+    const letter = btn.innerText;
+    if (incorrectGuesses.includes(letter)) {
+      btn.disabled = true;
+    } else if (guessWord.includes(letter)) {
+      btn.disabled = true;
+    } else {
+      btn.disabled = false;
+    }
+  });
 }
 
 function render() {
   guessEl.innerText = guessWord;
   spacemanEl.style.backgroundPosition = `-${SPRITE_WIDTH * (6 - incorrectGuesses.length)}px`;
   renderMessage();
+  renderBtns();
 }
