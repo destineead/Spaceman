@@ -51,17 +51,17 @@ aside > button {
 
 footer {
     grid-column-start: 3;
-    grid-row-start: 3;
+    grid-row-start: 2;
     letter-spacing: 1rem;
     font-size: 3rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-bottom: 1rem;
+    justify-content: flex-start;
+    text-align: center;
+    padding-bottom: 3rem;
     color: white;
+    margin-bottom: 3rem;
 }
 
-section {
+p {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -76,8 +76,15 @@ section {
 }
 
 #spaceman {
-  width: 504px;
-  height: 687px;
-  background-image: url("../imgs/spaceman.jpg");
+  height: auto;
+  background-image: url("../imgs/astronaut.png");
+  background-size: cover;
   background-position-x: 0;
+  grid-column-start: 3;
+  grid-row-start: 2;
+  grid-row-end: 3;
+  height: 687px;
+  width: 504px;
+  justify-self: flex-end;
 }
+
