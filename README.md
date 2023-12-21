@@ -15,9 +15,9 @@ Embark on an intergalactic adventure in "Spaceman," a thrilling twist on the cla
 
 # Getting Started
 
-[Click to Play Spaceman](your deployment url here)
+[Click to Play Spaceman](https://destineead.github.io/spaceman/)
 
 # Next Steps
 
-- Future enhancement one...
-- Future enhancement two... 
+- Make game responsive.
+- Add "Get Started" pop-up window upon loading.
