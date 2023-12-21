@@ -3,8 +3,8 @@ Embark on an intergalactic adventure in "Spaceman," a thrilling twist on the cla
 
 # Screenshot
 
-<img src="https://imgur.com/a/ZYSdiOq">
-<img src="https://imgur.com/a/STvPwfE">
+<img src="https://i.imgur.com/oVCqSNc.png">
+<img src="https://i.imgur.com/lICc2w9.png">
 
 # Technologies Used
 
