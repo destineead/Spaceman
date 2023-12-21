@@ -4,11 +4,15 @@ const WORDS = ['SPACE', 'GALAXY', 'PLANET','UNIVERSE','SOLAR SYSTEM', 'NEBULA',
                'STAR', 'MOON', 'COMET','ASTEROID', 'INTERSTELLAR', 'CELESTIAL', 'COSMIC', 
                'SUPERNOVA','QUASAR', 'DARK MATTER', 'GRAVITY', 'ORBIT', 'SPACE', 'TELESCOPE','SPACECRAFT'];
 const SPRITE_WIDTH = 504;
-// audio?
 const MSG_LOOKUP = {
   null: '',
   'W': '💫YOU WIN💫',
   'L': 'TRY AGAIN',
+}
+const sounds = {
+  clickSnd: 'sounds/click.mp3',
+  winSnd:'',
+  loseSnd:'', 
 }
 
 /*----- state variables -----*/
@@ -23,6 +27,7 @@ const guessEl = document.querySelector('footer');
 const spacemanEl = document.getElementById('spaceman');
 const msgEl = document.getElementById('msg');
 const keyboardBtns = document.querySelectorAll('aside > button');
+const player = new Audio();
 
 /*----- event listeners -----*/
 document.querySelector('aside').addEventListener('click', handleGuess);
@@ -59,7 +64,7 @@ function handleGuess(evt) {
     incorrectGuesses.push(letter);
     remainingAttempts--;
   }
- 
+  playAudio('clickSnd');
   getWinner();
   render();
 }
@@ -67,12 +72,20 @@ function handleGuess(evt) {
 function getWinner() {
   if (guessWord === secretWord) {
     winner = 'W';
+    playAudio('winSnd');
   } else if (guessWord !== secretWord && remainingAttempts > 0) {
     winner = null;
   } else {
     winner = 'L';
+    playAudio('loseSnd');
   }
 } 
+
+function playAudio(sound) {
+  player.src = sounds[sound];
+  player.play();
+  player.volume = .5;
+}
 
 function renderMessage() {
   msgEl.innerHTML = MSG_LOOKUP[winner];
