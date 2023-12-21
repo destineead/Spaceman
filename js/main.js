@@ -11,8 +11,8 @@ const MSG_LOOKUP = {
 }
 const sounds = {
   clickSnd: 'sounds/click.mp3',
-  winSnd:'',
-  loseSnd:'', 
+  winSnd:'sounds/win.wav',
+  loseSnd:'sounds/lose.wav', 
 }
 
 /*----- state variables -----*/
