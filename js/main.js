@@ -8,7 +8,7 @@ const SPRITE_WIDTH = 504;
 const MSG_LOOKUP = {
   null: '',
   'W': '💫YOU WIN💫',
-  'L': 'PLAY AGAIN',
+  'L': 'TRY AGAIN',
 }
 
 /*----- state variables -----*/
@@ -59,14 +59,9 @@ function handleGuess(evt) {
     incorrectGuesses.push(letter);
     remainingAttempts--;
   }
-  // keyboardBtn.disabled = guessWord.includes(letter) || incorrectGuesses.includes(letter);
+ 
   getWinner();
   render();
-}
-
-function renderMessage() {
-  // msgEl.style.visibility = winner === null ? 'hidden' : 'visible';
-  msgEl.innerHTML = MSG_LOOKUP[winner];
 }
 
 function getWinner() {
@@ -78,6 +73,10 @@ function getWinner() {
     winner = 'L';
   }
 } 
+
+function renderMessage() {
+  msgEl.innerHTML = MSG_LOOKUP[winner];
+}
 
 function renderBtns() {
   keyboardBtns.forEach(function(btn) {
