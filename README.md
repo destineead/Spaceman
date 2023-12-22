@@ -11,7 +11,6 @@ Embark on an intergalactic adventure in "Spaceman," a thrilling twist on the cla
 - JavaScript
 - HTML
 - CSS
-- CardStarter CSS Library
 
 # Getting Started
 
@@ -20,4 +19,4 @@ Embark on an intergalactic adventure in "Spaceman," a thrilling twist on the cla
 # Next Steps
 
 - Make game responsive.
-- Add "Get Started" pop-up window upon loading.
+- Add "Introduction" pop-up window upon loading.
